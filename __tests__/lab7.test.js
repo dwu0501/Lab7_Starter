@@ -171,10 +171,10 @@ describe('Basic user flow for Website', () => {
       return JSON.parse(localStorage.getItem('cart'));
     });
 
-    for(let i = 0; i <20; i++){
+    for(let i = 0; i < cart.length; i++){
       expect(cart[i]).toBe(i+1); 
     }
-
+    expect(cart.length).toBe(20);
   });
 
   // Checking to make sure that if you remove all of the items from the cart that the cart
